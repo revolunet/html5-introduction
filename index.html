@@ -51,8 +51,19 @@
 			.blinktag {
 			  -webkit-animation-name: blinker;  
 			  -webkit-animation-iteration-count: infinite;  
-			  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+			  -webkit-animation-timing-function: ease-in;
 			  -webkit-animation-duration: 1s; 
+			}
+			@-webkit-keyframes lightblinker {  
+			  0% { opacity: 1.0; }
+			  50% { opacity: 0.7; }
+			  100% { opacity: 1.0; }
+			}
+			.lightblinktag {
+			  -webkit-animation-name: lightblinker;  
+			  -webkit-animation-iteration-count: infinite;  
+			  -webkit-animation-timing-function: ease-in;
+			  -webkit-animation-duration: 1.5s; 
 			}
 		</style>
 	</head>
@@ -81,7 +92,7 @@
 						<li>+10 years in #webdev</li>
 						<li>RIA & mobile web development</li>
 						<li>Open source supporter</li>
-						<li>Python fanboy</li>
+						<li>Python #fanboy</li>
 						<li>Beer drinker</li>
 					</ul>
 					<br><br>
@@ -344,7 +355,7 @@ function error(result) {
 					<section>
 						<h1>HTML5 examples</h1>
 						<br><br>
-						<h1 class="pink huge">Apps</h1>
+						<h1 class="pink huge lightblinktag">Apps</h1>
 					</section>
 					<section>
 						<h1>Offline gmail</h1>
@@ -378,7 +389,7 @@ function error(result) {
 					<section>
 						<h1>HTML5 examples</h1>
 						<br><br>
-						<h1 class="pink huge">GAMES</h1>
+						<h1 class="pink huge lightblinktag">GAMES</h1>
 					</section>
 					<section>
 						<h1>Zynga</h1>
@@ -453,7 +464,7 @@ function error(result) {
 				
 				<section>
 					<h1 class='huge'>THE END</h1>
-					<h3 class='pink'>Thanks</h3>
+					<h3 class='pink lightblinktag'>Thanks !</h3>
 					<br>
 					<h5 class="inverted">reveal.js by Hakim El Hattab / hakim.se</h5>
 					<br>
