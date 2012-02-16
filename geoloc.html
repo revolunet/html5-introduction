@@ -1,0 +1,16 @@
+<script >
+function geolocate() {
+	navigator.geolocation.getCurrentPosition(geolocate_success, geolocate_error);
+}
+function geolocate_success(result) {
+	var s = document.querySelector('#result');
+	s.innerHTML = result.coords.latitude + ', ' +result.coords.longitude ;
+}
+function geolocate_error(result) {
+	var s = document.querySelector('#result');
+	s.innerHTML = "geolocation failed :/";
+}
+</script>
+<h1>Geolocation example</h1>
+<button onclick="geolocate()">geolocate me !</button>
+<h3 id="result"></h3>
