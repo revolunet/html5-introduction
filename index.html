@@ -111,7 +111,7 @@
 					<section>
 						<h1>1990</h1>
 						<h3>Tim Berners-Lee</h3>
-						creates the WWW and HTML 1.0 at French CERN
+						creates the internet and HTML 1.0 at French CERN
 						<br/>
 						<img src="img/tim.jpeg"/>
 					</section>
@@ -221,7 +221,7 @@
 							<li class=" lightblue" style="font-size:80px;">New elements</li>
 							<li>header, footer, section, article, nav...</li>
 							<br>
-							<li class=" lightblue" style="font-size:80px;">New attributes</li>
+							<li class=" lightblue" style="font-size:70px;">New / enhanced attributes</li>
 							<li>data-*, contenteditable, accesskey, draggable/dropzone, spellcheck...</li>
 							<br>
 							<li class=" pink" style="font-size:80px;font-weight:bold">Easier than ever</li>
@@ -254,7 +254,7 @@
 						<h1>Semantic</h1>
 						<br>
 						<ul>
-							<li class=" lightblue" style="font-size:80px;">Microdata</li>
+							<li class=" lightblue" style="font-size:80px;">Microdata (ex microformats)</li>
 							<li>Give more sense to your markup</li>
 							<li>googlebot friendly (rich snippets)</li>
 							<li>standards friendly</li>
@@ -276,7 +276,7 @@
 							<br>
 							<li class=" pink" style="font-size:80px;">Communications</li>
 							<br>
-							<li class=" lightblue" style="font-size:80px;">Dynamic forms</li>
+							<li class=" lightblue" style="font-size:80px;">Better forms</li>
 						</ul>
 					</section>
 					<section>
@@ -298,11 +298,11 @@
 &lt;form&gt;
   &lt;input type="text" placeholder="Nom & prénom" title="Nom ET Prénom SVP" pattern="\w+\s+\w+"&gt;
   &lt;br&gt;
-  &lt;input type="email" required="true" placeholder="Votre email"&gt;
+  &lt;input type="email" required  placeholder="Votre email"&gt;
   &lt;br&gt;
-  &lt;input type="phone" placeholder="Téléphone" pattern="[\d\s]+"&gt;
+  &lt;input type="tel" placeholder="Téléphone" pattern="[\d\s\.]+"&gt;
   &lt;br&gt;
-  &lt;input type="range" size="10" min="1" max="100" value="28" &gt;
+  &lt;input type="range" min="1" max="100" value="28" &gt;
   &lt;br&gt;
   &lt;input type="submit" &gt;
 &lt;/form&gt;</code></pre>
@@ -336,13 +336,11 @@ function geolocate() {
 	navigator.geolocation.getCurrentPosition(success, error);
 }
 function success(result) {
-	var s = document.querySelector('#result');
 	var coords = result.coords;
-	s.innerHTML = coords.latitude + ', ' + coords.longitude;
+	document.getElementById('result').innerText = coords.latitude + ', ' + coords.longitude;
 }
 function error(result) {
-	var s = document.querySelector('#result');
-	s.innerHTML = "geolocation failed :/";
+	document.getElementById('result').innerHTML = "geolocation failed :/";
 }
 &lt;/script&gt;
 &lt;h1&gt;Geolocation example&lt;/h1&gt;
