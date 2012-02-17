@@ -242,7 +242,7 @@
 				&lt;a href='/home'&gt;Home&lt;/a&gt;
 				&lt;a href='/contact'&gt;Contact&lt;/a&gt;
 			&lt;/nav&gt;
-		&lt;/head&gt;
+		&lt;/header&gt;
 		&lt;section&gt;
 			&lt;article&gt;blablabla&lt;/article&gt;
 		&lt;/section&gt;
@@ -254,7 +254,7 @@
 						<h1>Semantic</h1>
 						<br>
 						<ul>
-							<li class=" lightblue" style="font-size:80px;">Microdata (ex microformats)</li>
+							<li class=" lightblue" style="font-size:60px;">Microdata (ex microformats)</li>
 							<li>Give more sense to your markup</li>
 							<li>googlebot friendly (rich snippets)</li>
 							<li>standards friendly</li>
@@ -333,14 +333,14 @@
 						<br>
 						<pre><code style='font-size:18px;line-height:25px'>&lt;script &gt;
 function geolocate() {
-	navigator.geolocation.getCurrentPosition(success, error);
+  navigator.geolocation.getCurrentPosition(success, error);
 }
 function success(result) {
-	var coords = result.coords;
-	document.getElementById('result').innerText = coords.latitude + ', ' + coords.longitude;
+  var co = result.coords;
+  document.getElementById('result').innerText = co.latitude + ',' + co.longitude;
 }
 function error(result) {
-	document.getElementById('result').innerHTML = "geolocation failed :/";
+  document.getElementById('result').innerHTML = "geolocation failed :/";
 }
 &lt;/script&gt;
 &lt;h1&gt;Geolocation example&lt;/h1&gt;
